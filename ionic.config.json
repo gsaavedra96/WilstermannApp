@@ -1,0 +1,7 @@
+{
+  "name": "WilstermannApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
