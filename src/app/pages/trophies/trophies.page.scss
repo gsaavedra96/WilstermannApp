@@ -1,0 +1,51 @@
+
+ion-card{
+    text-align: center;
+}
+
+ion-grid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar-image{
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.background-image {
+    height: 100%;
+    //background-image: url('../../../assets/images/backgroundWW.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.name-size{
+    font-size: 1em;
+    text-align: center;
+}
+
+.content{
+    --background:rgb(255, 255, 255);
+}
+
+page-home {
+    ion-textarea {
+        border-bottom: 1px solid #000000;
+        margin: 0px 5px;
+    }
+    p {
+        text-align: justify;
+    }
+    .comment-box {
+        overflow: scroll;
+        height: 220px;
+    }
+}
+
+.toolbar{
+    --background: rgb(212, 16, 16);
+}

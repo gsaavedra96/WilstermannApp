@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar-image">
+    <ion-title class="ion-text-capitalize">
+      WilstermannAPP
+    </ion-title>
+    <ion-button (click)='confirmOrderAlert()' class="button-header-end" slot="end">
+      <ion-icon name="return-right"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header> 
+
+
+<ion-content>
+  <ion-item  lines="none" style="margin-top: 7em;">
+    <ion-label text-center style="font-weight: bold;">Wilstermann quiere que te registres</ion-label>
+  </ion-item>
+  <ion-item  lines="none">
+    <ion-label text-center style="font-size: 0.7em;">Accede a contenido exclusivo, personalizado para tu perfil, mira las predicciones y stickers oficiales</ion-label>
+  </ion-item>
+
+    <ion-row style="margin: 2em;">
+      <ion-col>
+        <ion-button (click)="goToRegisterPage()" type="submit" color="danger" expand="block">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin: 2em;">
+      <ion-col>
+        <ion-button (click)="goToLoginPage()" type="submit" color="danger" expand="block">Iniciar Sesion</ion-button>
+      </ion-col>
+    </ion-row>
+</ion-content>
+
+
+
+
+<ion-footer>
+  <ion-row>
+    <ion-segment [(ngModel)]="filter" class="footer-margin" color="tertiary" value="favorite">
+      <ion-segment-button value="call" [routerLink]="['/feed']">
+        <ion-label class="label-color">WApp</ion-label>
+        <ion-icon class="label-color" name="football"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="favorite" [routerLink]="['/home']">
+        <ion-label class="label-color">Explorar</ion-label>
+        <ion-icon class="label-color" name="search"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="map" [routerLink]="['/account']">
+        <ion-label class="label-color">Mi Cuenta</ion-label>
+        <ion-icon class="label-color" name="person"></ion-icon>
+      </ion-segment-button>
+      <div class="watermark">
+        <label class="label-color">Powered by AITBOL</label>
+      </div>
+    </ion-segment>
+  </ion-row>
+</ion-footer>
+
