@@ -1,6 +1,17 @@
+ion-header {
+    .toolbar-main {
+        --background: var(--ion-wapp-color-primary) !important;
+    }
+    ion-toolbar {
+    }
+}
+/*.toolbar-main {
+    --background: var(--ion-wapp-color-primary) !important;
+}*/
+
 ion-content {
     form, ion-grid {
-        height: 100%;;    
+        //height: 100%;;    
         .login-button{
             width: 80%;
         }
