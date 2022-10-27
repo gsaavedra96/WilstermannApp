@@ -1,9 +1,21 @@
-<ion-header [translucent]="true">
+<!--<ion-header [translucent]="true">
   <ion-toolbar class="toolbar-image">
     <ion-buttons slot="start">
       <ion-back-button mode='md' defaultHref="account"></ion-back-button>
     </ion-buttons>
     <ion-title text-center class="ion-text-capitalize">
+      WilstermannAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+
+<ion-header>
+  <ion-toolbar class="toolbar-main toolbar-image">
+    <ion-buttons slot="start">
+      <ion-back-button mode='md' defaultHref="account"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center class="ion-text-capitalize" style="margin-right: 50px;" >
       WilstermannAPP
     </ion-title>
   </ion-toolbar>
@@ -33,7 +45,10 @@
     </ion-item>
     <ion-row style="margin: 3em;">
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Sign Up</ion-button>
+        <!--<ion-button type="submit" color="danger" expand="block">Sign Up</ion-button>-->
+        <ion-button type="submit" mode="ios" class="button-h color-facebook start-button" color="light" fill="solid" size="default" shape="round" expand="block">
+          Sign Up
+        </ion-button>
       </ion-col>
     </ion-row>
   </form>

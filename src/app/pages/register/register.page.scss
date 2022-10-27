@@ -1,3 +1,12 @@
+ion-header {
+    .toolbar-main {
+        --background: var(--ion-wapp-color-primary) !important;
+    }
+    ion-toolbar {
+    }
+}
+
+
 ion-grid {
     height: 100%;
     display: flex;
