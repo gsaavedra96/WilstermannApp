@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="toolbar">
-    <ion-title class="ion-text-capitalize">
+    <ion-title style="color: rgb(233, 227, 227);" class="ion-text-capitalize">
       WilstermannAPP
     </ion-title>
 <!--     <ion-button (click)='confirmOrderAlert()' class="button-header-end" slot="end">
@@ -35,25 +35,25 @@
       <div *ngIf="feed.type == 'trivia'">
         <ion-card class="trivia-card" *ngIf="feed.level == 1" (click) ="gotoTrivia(feed)">
           <ion-card-header>
-            <ion-card-title style=" text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
+            <ion-card-title style="color: rgb(233, 227, 227); text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
           </ion-card-header>
-          <ion-card-content style="text-align: center;">
+          <ion-card-content style="color: rgb(233, 227, 227); text-align: center;">
             Nivel basico!
           </ion-card-content>
         </ion-card>
         <ion-card class="trivia-card" *ngIf="feed.level == 2" (click) ="gotoTrivia(feed)" >
           <ion-card-header>
-            <ion-card-title style="text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
+            <ion-card-title style="color: rgb(233, 227, 227); text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
           </ion-card-header>
-          <ion-card-content style="text-align: center;">
+          <ion-card-content style="color: rgb(233, 227, 227); text-align: center;">
             Nivel intermedio!
           </ion-card-content>
         </ion-card>
         <ion-card class="trivia-card" *ngIf="feed.level == 3" (click) ="gotoTrivia(feed)" >
           <ion-card-header>
-            <ion-card-title style="text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
+            <ion-card-title style="color: rgb(233, 227, 227); text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
           </ion-card-header>
-          <ion-card-content style="text-align: center;">
+          <ion-card-content style="color: rgb(233, 227, 227); text-align: center;">
             Nivel avanzado!
           </ion-card-content>
         </ion-card>

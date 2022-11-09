@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FeedService } from 'src/app/services/feedService.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.page.html',
@@ -10,7 +11,8 @@ export class FeedPage implements OnInit {
   public feedList : any;
 
   constructor(
-    private feedService : FeedService
+    private feedService : FeedService,
+    private router : Router
   ) { }
 
   ngOnInit() {
@@ -61,4 +63,13 @@ export class FeedPage implements OnInit {
     this.feedList.sort((a, b) => (a.creationTimestamp < b.creationTimestamp) ? 1 : -1)
     console.log("SORT",this.feedList)
   }
+
+  goToNew(post : any){
+    this.router.navigate(['/news/post'], {state: { post : post} });
+  }
+
+  gotoTrivia(trivia){
+    this.router.navigate(['/trivia/questions'], {state: { trivia : trivia} });
+  }
+
 }
