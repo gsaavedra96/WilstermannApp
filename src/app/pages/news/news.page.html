@@ -19,9 +19,8 @@
               <ion-card-subtitle>{{new.title}}</ion-card-subtitle>
             </ion-card-header> -->
             <ion-card-content class="name-size">{{new.title}}</ion-card-content>
-            <ion-row>
-              <ion-label class="hour-position">4h</ion-label>
-              <ion-icon (click)="goToComments(new)"class ="icon-right" name="paper" ></ion-icon>
+            <ion-row style="justify-content: center;">
+              <ion-label class="hour-position">{{new.creationTimestamp}}</ion-label>
               <!-- <ion-button  (click)="goToComments($event,new)"class ="icon-right" ></ion-button> -->
             </ion-row>
             <!-- <ion-icon name="person"></ion-icon> -->
