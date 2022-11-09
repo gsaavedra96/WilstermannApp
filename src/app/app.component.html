@@ -5,6 +5,7 @@
         <ion-list id="inbox-list">
           <ion-list-header>Home</ion-list-header>
           <ion-note>wilstermann.com.bo</ion-note>
+          <div appChangeBg [isCorrect]="true"></div>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">

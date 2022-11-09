@@ -23,8 +23,13 @@ ion-grid {
     text-align: center;
 }
 
-.content{
-    --background:rgb(255, 255, 255);
+.home-content{
+    //--background:rgb(255, 255, 255);
+    --background: rgba(17, 16, 16, 0.911);
+}
+
+.color-card{
+    --background:rgb(255, 255, 255) !important;
 }
 
 .hour-position{

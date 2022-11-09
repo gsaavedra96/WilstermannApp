@@ -17,6 +17,7 @@ export class NewComponent implements OnInit {
   public comment : any;
   public message :any;
   public islogged: any;
+  public userInfo: any;
 
   public post :any;
   rating = {
@@ -48,6 +49,7 @@ export class NewComponent implements OnInit {
     let res = false;
     if(localStorageProvider.getObject('userInfo')){
        res = true;
+       this.userInfo = localStorageProvider.getObject('userInfo');
     } 
     return res;
   }
@@ -76,7 +78,7 @@ export class NewComponent implements OnInit {
     let data : any = {
       newsId : this.post.id,
       content : this.comment,
-      userId : localStorageProvider.getObject('userInfo').id
+      userId : this.userInfo.id
     }
     this.commentService.addCommentByNewId(data).subscribe((response: any) => { 
       this.commentsList = response.data;

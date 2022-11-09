@@ -88,16 +88,16 @@ ion-card{
   }
 
   ion-card {
-    --background: #000;
-    --color: #9efff0;
+    --background: rgb(255, 255, 255);;
+    --color: rgba(17, 16, 16, 0.911);
   }
   
   ion-card-title {
-    --color: #52ffe4;
+    --color: rgba(17, 16, 16, 0.911);
   }
   
   ion-card-subtitle {
-    --color: #d1fff8;
+    --color: rgba(17, 16, 16, 0.911);
   }
   
   /* iOS places the subtitle above the title */
@@ -114,4 +114,16 @@ ion-card{
   
   .has-card-footer {
     padding-bottom: 15px;
+  }
+  
+  .color-content{
+    --background: rgba(17, 16, 16, 0.911);
+  }
+
+  ion-segment-button {
+    --background-checked: rgb(212, 16, 16);
+    --indicator-color: transparent;
+    --border-color:  rgb(212, 16, 16);
+    --color:  rgb(223, 215, 215);
+    //--color-checked: rgb(212, 16, 16);
   }
