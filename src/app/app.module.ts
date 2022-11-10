@@ -13,7 +13,7 @@ import { FirebaseX } from '@ionic-native/firebase-x/ngx';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),HttpClientModule,AppRoutingModule, BrowserAnimationsModule],
   providers: [

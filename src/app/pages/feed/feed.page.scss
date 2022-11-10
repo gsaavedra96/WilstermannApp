@@ -16,6 +16,11 @@ ion-grid {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.toolbar{
+    --background: rgb(212, 16, 16);
+}
+
 .home-image {
     height: 100%;
     //background-image: url('../../../assets/images/backgroundWW.jpg');
@@ -35,6 +40,10 @@ ion-list {
     align-items: center;
     justify-content: center;
     --background-color:yellow;
+}
+
+.home-content{
+    --background: rgba(17, 16, 16, 0.911);
 }
 
 ion-footer{
@@ -58,7 +67,7 @@ ion-label{
 }
 
 .dashboard{
-    margin-bottom: 5em;
+    margin-bottom: 0.3em;
 }
 
 .search-bar{
@@ -67,4 +76,18 @@ ion-label{
 
 ion-searchbar{
     --box-shadow:none;
+}
+
+ion-card {
+    --background: rgb(255, 255, 255);;
+    --color: rgba(17, 16, 16, 0.911);
+  }
+
+ion-card-content {
+--background: rgb(255, 255, 255);;
+--color: rgba(17, 16, 16, 0.911);
+}
+
+.trivia-card{
+    --background: rgb(212, 16, 16);
 }

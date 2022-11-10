@@ -1,43 +1,107 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="toolbar-image">
-    <ion-title class="ion-text-capitalize">
+  <ion-toolbar class="toolbar">
+    <ion-title style="color: rgb(233, 227, 227);" class="ion-text-capitalize">
       WilstermannAPP
     </ion-title>
-    <ion-button (click)='confirmOrderAlert()' class="button-header-end" slot="end">
+<!--     <ion-button (click)='confirmOrderAlert()' class="button-header-end" slot="end">
       <ion-icon class="icon" ios="ios-log-out" md='ios-log-out'></ion-icon>
-    </ion-button>
+    </ion-button> -->
   </ion-toolbar>
 </ion-header> 
 
-<ion-content fixed color="primary">
-  <ion-grid class="home-image">
-<!--     <div class="spinner-container" *ngIf="spinner">
-      <ion-spinner color="primary"></ion-spinner>
-    </div> -->
-    <ion-refresher (ionRefresh)="doRefresh($invitation)" slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
+<ion-content class="home-content">
+  <ion-grid class="background-image">
+    <div class="dashboard" *ngFor=" let feed of feedList">
 
-    <div class="dashboard">
+      <div *ngIf="feed.type == 'news'">
+        
+            <ion-card class="color-card" text-center>
+              <img  (click)="goToNew(feed)" [src]="feed.image.url" />
+  <!--        <ion-card-header>
+                <ion-card-subtitle>{{feed.title}}</ion-card-subtitle>
+              </ion-card-header> -->
+              <ion-card-content class="name-size">{{feed.title}}</ion-card-content>
+              <ion-row style="justify-content: center;">
+                <ion-label class="hour-position">{{feed.creationTimestamp}}</ion-label>
+                <!-- <ion-button  (click)="goToComments($event,feed)"class ="icon-right" ></ion-button> -->
+              </ion-row>
+              <!-- <ion-icon name="person"></ion-icon> -->
+              <!-- <h2 class="name-size">{{feed.title}}</h2> -->
+            </ion-card>
+          
+      </div>
+
+
+      <div *ngIf="feed.type == 'trivia'">
+        <ion-card class="trivia-card" *ngIf="feed.level == 1" (click) ="gotoTrivia(feed)">
+          <ion-card-header>
+            <ion-card-title style="color: rgb(233, 227, 227); text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="color: rgb(233, 227, 227); text-align: center;">
+            Nivel basico!
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="trivia-card" *ngIf="feed.level == 2" (click) ="gotoTrivia(feed)" >
+          <ion-card-header>
+            <ion-card-title style="color: rgb(233, 227, 227); text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="color: rgb(233, 227, 227); text-align: center;">
+            Nivel intermedio!
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="trivia-card" *ngIf="feed.level == 3" (click) ="gotoTrivia(feed)" >
+          <ion-card-header>
+            <ion-card-title style="color: rgb(233, 227, 227); text-align: center;">Nueva Trivia! - {{feed.titleTrivia}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="color: rgb(233, 227, 227); text-align: center;">
+            Nivel avanzado!
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+
+
+      <div *ngIf="feed.type == 'match'">
+        <ion-card text-center>
+          <ion-card-header>
+            <ion-card-title>{{feed.day}}</ion-card-title>
+            <ion-card-subtitle>
+              <ion-row>
+                <ion-col size="1">
+                  <ion-img [src]="feed.homeTeamLogo.urlLogo"></ion-img>
+                </ion-col>
+                <ion-col size="3">
+                  {{feed.homeName}}
+                </ion-col>
+                <ion-col size="1">
+                  {{feed.homeGoals}}
+                </ion-col >
+                <ion-col size="2">
+                  VS
+                </ion-col>
+                <ion-col size="1">
+                  {{feed.visitGoals}}
+                </ion-col>
+                <ion-col size="3">
+                  {{feed.visitName}}
+                </ion-col>
+                <ion-col size="1">
+                  <ion-img [src]="feed.visitTeamLogo.urlLogo"></ion-img>
+                </ion-col>
+              </ion-row> 
+            </ion-card-subtitle>
+          </ion-card-header>
+    
+          <ion-card-content>
+            {{feed.creationTimestamp}}
+          </ion-card-content>
+          
+        </ion-card>
+      </div>
+
 
     </div>
-<!--     <div *ngIf="!spinner">
 
-      <ion-list *ngFor="let local of locals">
-        <ion-row>
-          <ion-col (click)="getLocal(local)">
-            <div class="card-center-image" style="background-image: url('./assets/images/jagger_lab.jpeg');">
-              <div class="card-center-bg" >
-                <div class="card-center-text">
-                <p class="title">{{local.name}}</p>
-                <p class="subtitle">{{local.description}}</p>
-              </div>
-              </div>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-list>
-    </div> -->
   </ion-grid>
 </ion-content>
 <ion-footer>

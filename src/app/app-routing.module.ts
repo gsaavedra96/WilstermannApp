@@ -58,6 +58,10 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
+  {
+    path: 'trivia',
+    loadChildren: () => import('./pages/trivia/trivia.module').then( m => m.TriviaPageModule)
+  },
 ];
 @NgModule({
   imports: [
