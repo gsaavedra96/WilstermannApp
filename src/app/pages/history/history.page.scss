@@ -31,16 +31,46 @@ ion-card{
 }
 
 .paragraph{
-    margin:1em;
+    margin-top:1.2em;
+    margin-left:0.9em;
+    margin-right:0.9em;
+    margin-bottom:2em;
+    background-color: #1c1c1c !important;
+    padding: 0.5em 0.3em;
+    border-radius: 5px;
 }
 
-.title-paragraph{
+.title-paragraph {
     font-size: 2em;
 }
 
-.label-paragraph{
+.history-title {
+    text-align: left;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;    
+}  
+
+.label-paragraph {
     font-size: 1em;
     padding-top: 150em;
+}
+.history-label {  
+    text-align: justify;
+    color: white;
+    font-size: 0.9rem;
+    //font-weight: 300;
+    font-weight: inherit;
+    font-style: inherit;
+    //font-stretch: normal;
+    //font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    margin:0.75em;
 }
 
 .toolbar{
@@ -48,4 +78,6 @@ ion-card{
 }
 .color-content{
     --background: rgba(17, 16, 16, 0.911);
+    //--background: #252525;
   }
+
