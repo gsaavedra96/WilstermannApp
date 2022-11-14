@@ -67,7 +67,7 @@ ion-label{
 }
 
 .dashboard{
-    margin-bottom: 0.3em;
+    margin-bottom: 0.2em;
 }
 
 .search-bar{
@@ -79,13 +79,13 @@ ion-searchbar{
 }
 
 ion-card {
-    --background: rgb(255, 255, 255);;
+    --background: rgb(255, 255, 255);
     --color: rgba(17, 16, 16, 0.911);
   }
 
 ion-card-content {
---background: rgb(255, 255, 255);;
---color: rgba(17, 16, 16, 0.911);
+    --background: rgb(255, 255, 255);;
+    --color: rgba(17, 16, 16, 0.911);
 }
 
 .trivia-card{

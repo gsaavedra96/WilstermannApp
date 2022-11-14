@@ -68,7 +68,8 @@ export class AccountPage implements OnInit {
   }
 
   logOut() {
-    
+    localStorageProvider.removeObject("userInfo");
+    this.router.navigate(['/'])
   }
 
   goToRegisterPage(){

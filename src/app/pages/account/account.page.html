@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="toolbar-image">
+  <ion-toolbar class="toolbar">
     <ion-title class="ion-text-capitalize">
       WilstermannAPP
     </ion-title>
@@ -10,25 +10,26 @@
 </ion-header> 
 
 
-<ion-content>
-  <ion-item  lines="none" style="margin-top: 7em;">
-    <ion-label text-center style="font-weight: bold;">Wilstermann quiere que te registres</ion-label>
-  </ion-item>
-  <ion-item  lines="none">
-    <ion-label text-center style="font-size: 0.7em;">Accede a contenido exclusivo, personalizado para tu perfil, mira las predicciones y stickers oficiales</ion-label>
-  </ion-item>
-
-    <ion-row style="margin: 2em;">
-      <ion-col>
-        <ion-button (click)="goToRegisterPage()" type="submit" color="danger" expand="block">Registrarse</ion-button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row style="margin: 2em;">
-      <ion-col>
-        <ion-button (click)="goToLoginPage()" type="submit" color="danger" expand="block">Iniciar Sesion</ion-button>
-      </ion-col>
-    </ion-row>
+<ion-content class="color-content">
+  <ion-grid style="text-align: center;" class="ion-padding">
+    <ion-img width="80" height="80" src="../../../assets/images/home/wilsterLogo.png"></ion-img>
+    <ion-label style="margin:1em; color: rgb(233, 227, 227);">
+      Wilstermann quiere que te registres
+    </ion-label>
+    <ion-label style="margin:1em; color: rgb(233, 227, 227);">
+      Accede a contenido exclusivo, personalizado para tu perfil, mira las predicciones y stickers oficiales
+    </ion-label>
+  </ion-grid>
+    <ion-card class="card-color" (click)="goToRegisterPage()" color="primary">
+        <ion-card-header>
+          <ion-card-title style="text-align: center;">Registrarse</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <ion-card (click)="goToLoginPage()" color="primary">
+        <ion-card-header>
+          <ion-card-title style="text-align: center;">Iniciar Sesion</ion-card-title>
+        </ion-card-header>
+      </ion-card>
 </ion-content>
 
 
